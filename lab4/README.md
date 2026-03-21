@@ -37,3 +37,7 @@ Bez pliku composer.yaml
 ### Uruchomienie strony
 W przeglądarce wejście na strone 127.0.0.1:8888 lub localhost:8888
     Jeżeli został zdefiniowany inny port zewnętrzny, należy wtedy zamienić 8888 na odpowiedni port
+
+### Obraz na Docker  
+
+[iwinter1/university-lab](https://hub.docker.com/repository/docker/iwinter1/university-lab/general)
