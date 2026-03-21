@@ -40,4 +40,4 @@ W przeglądarce wejście na strone 127.0.0.1:8888 lub localhost:8888
 
 ### Obraz na Docker  
 
-[iwinter1/university-lab](https://hub.docker.com/repository/docker/iwinter1/university-lab/general)
+[iwinter1/university-lab](https://hub.docker.com/r/iwinter1/university-lab)
