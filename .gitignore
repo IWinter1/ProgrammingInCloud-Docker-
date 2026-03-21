@@ -1,0 +1,15 @@
+# System files
+*.DS_Store
+*.swp
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker-related files that should not be in the repo
+*.tar
+docker-compose.override.yaml
+
+# Temporary or build directories (if you create them)
+tmp/
+build/
