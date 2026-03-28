@@ -19,6 +19,11 @@ Utworzenie kontenera na podstawie obrazu registry:2, wskazanie kontenerowi ście
         -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
         registry:2`
 
+Dla szybszego działania używane tutaj jest w curl -k, ale żeby wchodzić przez certyfikat należy użyć komendy:
+` curl --cacert ./certs/domain.crt \
+  --insecure \
+  https://localhost:443/v2/_catalog`
+  
 Po wejściu do lokalnego repozytorium pod adresem: https://localhost/v2/_catalog:
 lub `curl -k -X GET https://localhost:443/v2/_catalog`:
         {"repositories":[]}
