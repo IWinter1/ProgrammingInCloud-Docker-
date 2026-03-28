@@ -67,12 +67,12 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 6bbfd07e65fa   lab5:v2.0.0   "/docker-entrypoint.…"   4 minutes ago    Up 4 minutes (healthy)    0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   nginx_s
 4dd28a0bfd7d   lab5:v1.0.0   "/docker-entrypoint.…"   44 minutes ago   Up 44 minutes (healthy)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   lab5
 "
-![Stan kontenerów](.screenshots/screen1.jpg)
+![Stan kontenerów](screenshots/screen1.jpg)
 
 ### Zrzuty ekranu z poprawnego dziłania konterów w przeglądarce
 
-![wersja 1.0.0](.screenshots/screen2.jpg)
-![wersja 2.0.0](.screenshots/screen3.jpg)
+![wersja 1.0.0](screenshots/screen2.jpg)
+![wersja 2.0.0](screenshots/screen3.jpg)
 
 ### Zatrzymanie kontenera jezeli byl w trybie -d
 
