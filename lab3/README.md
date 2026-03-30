@@ -3,7 +3,7 @@
 ### Etap 1 
 
 Utworzenie certyfikatu
-![Certyfikat](.screenshots/screen1.jpg)
+![Certyfikat](.screenshots/screen.jpg)
 
 
 ### Etap 2
