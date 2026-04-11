@@ -81,3 +81,6 @@ Zmiana obrazu na public oraz podpięcie do odpowiedniego repo
 
 Przetestowanie działania obrazu (pobranie z githuba i uruchomienie)
 ![test](.screenshots/test.jpg)
+
+# Link do obrazu na githubie
+[Obraz](https://github.com/IWinter1/pawcho6/pkgs/container/pawcho6)
