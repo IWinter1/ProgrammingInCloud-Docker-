@@ -83,4 +83,9 @@ Przetestowanie działania obrazu (pobranie z githuba i uruchomienie)
 ![test](.screenshots/test.jpg)
 
 # Link do obrazu na githubie
+
+Są dwie wersje tego obrazu:
+tag: lab6 - wtedy ARG domyślne, czyli wersja aplikacji 1.0.0
+tag: lab6-v2 - wtedy ARG = 2.0.0, czyli wersja aplikacji 2.0.0
+
 [Obraz](https://github.com/IWinter1/pawcho6/pkgs/container/pawcho6)
