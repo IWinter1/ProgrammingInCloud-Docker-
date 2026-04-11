@@ -2,8 +2,8 @@
 
 Projekt (sprawozdanie) lab 6 - utworzenie repo publicznego na githubie przy użyciu "gh cli". Cały katalog z laba 5 został skopiowany do katalogu o nazwie "lab6", chociaż niektóre pliki można usunąc przed przesłaniem do repo na githubie tj. Dockerfile, README.md (to samo co w repo z laba 5), cały katalog .screenshots (wykorzystywany w README.md) oraz z katalogu src obraz alpine w .tar. Po etapie 1. zostało to wykonane, aby przy budowaniu obrazu nie były pobierane niepotrzebne pliki (śmieci). Następnie został zmodyfikowany Dockerfile, tak aby pełnił on rolę frontendu dla silnika BuildKit. Następnie na podstawie tego Dockerfile został stworzony obraz Docker, który w następnym kroku dostał tag: "lab6". Następnie został on przesłany na githuba, gdzie zmieniono go na "Public" oraz podłączono do odpowiedniego repo.
 
-# Na samym dole tego pliku jest zachowana kolejność wykonywania zadań wraz z zrzutami ekranów
-# Natomiast te nagłówki informują o najważniejszych elementach
+#### Na samym dole tego pliku jest zachowana kolejność wykonywania zadań wraz z zrzutami ekranów
+#### Natomiast te nagłówki informują o najważniejszych elementach
 
 ### Pliki (dockerfile i inne)
 
