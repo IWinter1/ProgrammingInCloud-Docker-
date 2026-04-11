@@ -17,11 +17,11 @@ RUN mkdir -p ~/.ssh \
 #zmienna ARG VERSION - bazowo 1.0.0
 ARG VERSION=1.0.0
 
-#zapisanie zmiennej version do pliku version.txt w /use/app
-RUN echo $VERSION > version.txt
-
 #deklaracja katalogu roboczego, gdzie zostanie sklonowane repo z githuba 
 WORKDIR /usr/app 
+
+#zapisanie zmiennej version do pliku version.txt w /use/app
+RUN echo $VERSION > version.txt
 
 #sklonowanie repo z githuba (za pomocą SSH - BuildKit) - w katalogu /usr/app zostanie utworzony katalog pawcho6
 RUN --mount=type=ssh git clone git@github.com:IWinter1/pawcho6.git .
