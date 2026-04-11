@@ -2,6 +2,8 @@
 
 Projekt (sprawozdanie) lab 6 - utworzenie repo publicznego na githubie przy użyciu "gh cli". Cały katalog z laba 5 został skopiowany do katalogu o nazwie "lab6", chociaż niektóre pliki można usunąc przed przesłaniem do repo na githubie tj. Dockerfile, README.md (to samo co w repo z laba 5), cały katalog .screenshots (wykorzystywany w README.md) oraz z katalogu src obraz alpine w .tar. Po etapie 1. zostało to wykonane, aby przy budowaniu obrazu nie były pobierane niepotrzebne pliki (śmieci). Następnie został zmodyfikowany Dockerfile, tak aby pełnił on rolę frontendu dla silnika BuildKit. Następnie na podstawie tego Dockerfile został stworzony obraz Docker, który w następnym kroku dostał tag: "lab6". Następnie został on przesłany na githuba, gdzie zmieniono go na "Public" oraz podłączono do odpowiedniego repo.
 
+# Na samym dole tego pliku jest zachowana kolejność wykonywania zadań wraz z zrzutami ekranów
+
 ### Pliki (dockerfile i inne)
 
 W tym katalogu znajduje się plik Dockerfile, natomiast inne pliki potrzebne do budowy obrazu znajdują sie w repo: [iwinter1/pawcho6](https://github.com/IWinter1/pawcho6)
@@ -36,14 +38,14 @@ Komenda do zbudowania kontenera:
     --nazwa lab6 - lub inna nazwa
     --na podstawie zbudowanego wyżej obrazu
 
-Zrzut ekranu w sekcji budowanie [screen](#budowanie)   
+Zrzut ekranu w sekcji budowanie [Budowanie](#budowanie)   
 
 ### Sprawdzenie stanu kontenera (potwierdzenie jego działania poprawnego)
 
     `docker ps --filter "name=lab6"`
 Na zrzucie ekranu jest użyte `docker ps`, ponieważ w momencie robienia zrzutu ekranu istnieją tylko kontenery zawierające ten obraz.
 
-Zrzut ekranu w sekcji budowanie [screen](#budowanie) 
+Zrzut ekranu w sekcji budowanie [Budowanie](#budowanie) 
 
 ### Zatrzymanie kontenera jezeli byl w trybie -d
 
@@ -62,7 +64,7 @@ Dodanie klucza do walidacji (przed budowaniem)
 ![klucz](.screenshots/dodanie%20klucza.jpg)
 
 Budowanie obrazu i kontenera
-w tej sekcji [screen](#budowanie)
+![budowanie](.screenshots/zbudowanie.jpg)
 
 Sprawdzenie działania kontenera
 ![kontener](.screenshots/strona.jpg)
@@ -71,7 +73,7 @@ Logowanie w docker do githuba
 ![logowanie](.screenshots/logowanie.jpg)
 
 Przesłanie obrazu na githuba
-[screen](#stagowanie-i-przesłanie-obrazu-na-gita) 
+![tag](.screenshots/tag_przeslanie.jpg)
 
 Zmiana obrazu na public oraz podpięcie do odpowiedniego repo
 ![obraz](.screenshots/obraz_git.jpg)
