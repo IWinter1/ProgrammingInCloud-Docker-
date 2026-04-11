@@ -50,7 +50,7 @@ Zrzut ekranu w sekcji budowanie [screen](#budowanie)
     `docker stop lab6`
         lub inna nadana nazwa kontenera
 
-### Zrzuty ekranu potwierdzające wykonanie reszty zadań
+### Zrzuty ekranu potwierdzające wykonanie zadań (zachowana kolejność zadania)
 
 Poprawne zalogowanie do swojego konta github:
 ![login](.screenshots/login.jpg)
@@ -70,7 +70,10 @@ Sprawdzenie działania kontenera
 Logowanie w docker do githuba
 ![logowanie](.screenshots/logowanie.jpg)
 
-Przesłanie obrazu na githuba, zmiana obrazu na public oraz podpięcie do odpowiedniego repo
+Przesłanie obrazu na githuba
+[screen](#stagowanie-i-przesłanie-obrazu-na-gita) 
+
+Zmiana obrazu na public oraz podpięcie do odpowiedniego repo
 ![obraz](.screenshots/obraz_git.jpg)
 
 Przetestowanie działania obrazu (pobranie z githuba i uruchomienie)
