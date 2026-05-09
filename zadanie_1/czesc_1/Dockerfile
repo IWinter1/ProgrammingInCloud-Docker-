@@ -23,7 +23,7 @@ RUN g++ -static -Os -s \
 FROM scratch
 
 # Metadata and OCI compliance
-ARG AUTHOR="Author"
+ARG AUTHOR="Kristian Kowalczyk"
 ARG LICENSE="OPEN"
 ARG BUILD_DATE
 ARG APP_PORT=8080
