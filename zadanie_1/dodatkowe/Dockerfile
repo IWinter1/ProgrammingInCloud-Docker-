@@ -10,7 +10,7 @@ WORKDIR /app
 # Configure GitHub as a trusted host
 RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-# Clone ONLY the 'zadanie_1' directory using sparse-checkout and shallow clone
+# Clone ONLY the 'zadanie_1/czesc_1' directory using sparse-checkout and shallow clone
 # This saves bandwidth and build time
 RUN --mount=type=ssh \
     git clone --depth 1 --filter=blob:none --sparse git@github.com:IWinter1/ProgrammingInCloud-Docker-.git . && \
