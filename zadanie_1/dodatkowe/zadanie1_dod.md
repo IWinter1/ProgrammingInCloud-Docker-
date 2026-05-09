@@ -19,16 +19,16 @@ Obraz został zbudowany przy użyciu buildera ze sterownikiem `docker-container`
 **Zbudowanie obrazu**
 ![Build](.screenshots/build.jpg)
 
-**Polecenie weryfikujące manifest:**
-docker buildx imagetools inspect iwinter1/pawcho-task1:latest
-
 ## 3. Zarządzanie danymi cache (Tryb registry max)
 
 **Zbudowanie obrazu z wykorzystaniem cache (nowy tag v1 zamiast latest)**
 W procesie budowy wykorzystano zdalny cache przesłany do DockerHub. Dzięki temu kolejne budowania są znacznie szybsze (status `CACHED`).
 ![Build-cache](.screenshots/build_z_cache.jpg)
 
-**Wynik (zgodny z OCI):**
+**Polecenie weryfikujące manifest:**
+`docker buildx imagetools inspect iwinter1/pawcho-task1:latest`
+
+**Wynik:**
 ![Manifest](.screenshots/architektury.jpg)
 
 
