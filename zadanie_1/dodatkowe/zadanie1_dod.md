@@ -49,4 +49,4 @@ Przeprowadzono analizę bezpieczeństwa obrazu za pomocą polecenia `docker scou
 
 ## 5. Linki do zasobów:
 
-* **Repozytorium DockerHub (Obrazy OCI):** [DockerHub](https://hub.docker.com/r/iwinter1/pawcho-task1) - została włączona dla tego obrazu analiza na dockerhubie
+* **Repozytorium DockerHub (Obrazy OCI):** [DockerHub](https://hub.docker.com/r/iwinter1/pawcho-task1) - zostało włączone sprawdzanie CVE dla tego repo obrazów dockerhubie
