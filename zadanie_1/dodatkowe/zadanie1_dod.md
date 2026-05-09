@@ -49,5 +49,5 @@ Przeprowadzono analizę bezpieczeństwa obrazu za pomocą polecenia `docker scou
 
 ## 5. Linki do zasobów:
 
-* **Repozytorium GitHub (Kod źródłowy i Dockerfile):** [https://github.com/IWinter1/ProgrammingInCloud-Docker-](https://github.com/IWinter1/ProgrammingInCloud-Docker-)
-* **Repozytorium DockerHub (Obrazy OCI):** [https://hub.docker.com/r/iwinter1/pawcho-task1](https://hub.docker.com/r/iwinter1/pawcho-task1) - została włączona dla tego obrazu analiza na dockerhubie
+* **Repozytorium GitHub (Kod źródłowy i Dockerfile):** [GitHub](https://github.com/IWinter1/ProgrammingInCloud-Docker-)
+* **Repozytorium DockerHub (Obrazy OCI):** [DockerHub](https://hub.docker.com/r/iwinter1/pawcho-task1) - została włączona dla tego obrazu analiza na dockerhubie
