@@ -26,20 +26,23 @@ Obraz został zbudowany przy użyciu buildera ze sterownikiem `docker-container`
 ![Manifest](.screenshots/architektury.jpg)
 
 ## 3. Zarządzanie danymi cache - zbudowanie obrazu z wykorzystaniem cache
-
 **Zbudowanie obrazu z wykorzystaniem cache (nowy tag v1 zamiast latest)**
 W procesie budowy wykorzystano zdalny cache przesłany do DockerHub. Dzięki temu kolejne budowania są znacznie szybsze (status `CACHED`).
+
 ![Build-cache](.screenshots/build_z_cache.jpg)
 
 Po czasach budować obrazów widać wielki wpływ cache.
 
 ## 4. Analiza podatności (Docker Scout)
-Przeprowadzono analizę bezpieczeństwa obrazu — nie wykryto podatności.
+
+Przeprowadzono analizę bezpieczeństwa obrazu za pomocą polecenia `docker scout cves iwinter1/pawcho-task1:latest` — nie wykryto problemów (brak podatności).
 
 **Wynik skanowania:**
+
 ![Skan](.screenshots/skan.jpg)
 
 **Wynik skanowania w Docker Desktop**
+
 ![Skan-dd](.screenshots/skan-desktop.jpg)
 
 **Komentarz:** Brak podatności HIGH/CRITICAL wynika z minimalizmu obrazu (brak systemu operacyjnego w warstwie końcowej - są tam tylko skompilowane pliki cpp).
