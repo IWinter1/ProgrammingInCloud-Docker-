@@ -1,0 +1,1 @@
+Jest to repozytorium, w którym zostało przedstawione wykonanie zadanie 1 z przedmiotu PAWCHO. Katalog "czesc_1" zawiera wykonanie zadania obowiązakowego (zostało przedstawione na labie), natomiast katalog "dodatkowe" zawiera wykonanie zadania dodatkowego.
