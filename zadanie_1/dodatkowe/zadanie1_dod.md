@@ -31,7 +31,7 @@ W procesie budowy wykorzystano zdalny cache przesłany do DockerHub. Dzięki tem
 
 ![Build-cache](.screenshots/build_z_cache.jpg)
 
-Po czasach budować obrazów widać wielki wpływ cache.
+Po czasach budowań obrazów widać wielki wpływ cache.
 
 ## 4. Analiza podatności (Docker Scout)
 
