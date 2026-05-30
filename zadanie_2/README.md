@@ -18,14 +18,17 @@ type=ref,event=pr (priorytet: 300) - jeśli zostanie utworzony "Pull request" (p
 type=raw,value=latest,enable={{is_default_branch}} (priorytet: 400) - gdy operacja dodania obrazu odbywa się na gałąź (branch) głównej, wtedy zostaje dopisany tag latest
 type=semver,pattern={{version}} (priorytet: 500) - jeśli zostanie utworzony tag, to wtedy zostanie tym tagiem nazwany obraz
 
-##### Linki do źródeł - [GitHub](https://github.com/docker/metadata-action) [StackOverflow](https://stackoverflow.com/questions/72673143/github-workflows-how-do-i-additionally-tag-a-docker-image-when-building-only-on)
+##### Linki do źródeł - [GitHub](https://github.com/docker/metadata-action), [StackOverflow](https://stackoverflow.com/questions/72673143/github-workflows-how-do-i-additionally-tag-a-docker-image-when-building-only-on)
 
-# Cache [DockerHub](https://hub.docker.com/r/iwinter1/zadanie2-cache/tags)
+# Cache 
 
+link - [DockerHub](https://hub.docker.com/r/iwinter1/zadanie2-cache/tags)
 #### Cache jest zawsze przesyłany i odbierany z tego samego repozytorium na DockerHubie - nie jest robione to dynamicznie, aby oszczędzić czas - zawsze ma tag `main`
 
 
-# Plik konfiguracyjny [plik](../zadanie_2/)
+# Plik konfiguracyjny
+
+link - [plik](../zadanie_2/zadanie_2_workflow.yml)
 
 #### Etapy:
 
