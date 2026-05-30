@@ -12,11 +12,11 @@
 # Tagowanie obrazów
 
 #### Został wykonane tagowanie obrazu na 4 poziomach (jeden to po prostu nadanie tagu "latest") - z priorytetami (wykona się zawsze ten, który ma wyższy priorytet)
-type=schedule (priorytet: 100) - niewykorzystywane tutaj (ale można zaimplementować w przyszłości) - Jeśli potok zostałby uruchomiony z harmonogramu (tzw. cron), obraz otrzymałby tag z dzisiejszą datą, np. 20260530
-type=ref,event=branch (priorytet: 200) - jeśli zwykły kod zostanie przesłany na gałąź (np. main lub dev), obraz zostanie otagowany jej nazwą (np. ghcr.io/.../zadanie2:main)
-type=ref,event=pr (priorytet: 300) - jeśli zostanie utworzony "Pull request" (propozycja wprowadzenia zmian do kodu w repozytorium), to wtedy obraz dostaje tag (np. pr-12)
-type=raw,value=latest,enable={{is_default_branch}} (priorytet: 400) - gdy operacja dodania obrazu odbywa się na gałąź (branch) głównej, wtedy zostaje dopisany tag latest
-type=semver,pattern={{version}} (priorytet: 500) - jeśli zostanie utworzony tag, to wtedy zostanie tym tagiem nazwany obraz
+* type=schedule (priorytet: 100) - niewykorzystywane tutaj (ale można zaimplementować w przyszłości) - Jeśli potok zostałby uruchomiony z harmonogramu (tzw. cron), obraz otrzymałby tag z dzisiejszą datą, np. 20260530
+* type=ref,event=branch (priorytet: 200) - jeśli zwykły kod zostanie przesłany na gałąź (np. main lub dev), obraz zostanie otagowany jej nazwą (np. ghcr.io/.../zadanie2:main)
+* type=ref,event=pr (priorytet: 300) - jeśli zostanie utworzony "Pull request" (propozycja wprowadzenia zmian do kodu w repozytorium), to wtedy obraz dostaje tag (np. pr-12)
+* type=raw,value=latest,enable={{is_default_branch}} (priorytet: 400) - gdy operacja dodania obrazu odbywa się na gałąź (branch) głównej, wtedy zostaje dopisany tag latest
+* type=semver,pattern={{version}} (priorytet: 500) - jeśli zostanie utworzony tag, to wtedy zostanie tym tagiem nazwany obraz
 
 ##### Linki do źródeł - [GitHub](https://github.com/docker/metadata-action), [StackOverflow](https://stackoverflow.com/questions/72673143/github-workflows-how-do-i-additionally-tag-a-docker-image-when-building-only-on)
 
