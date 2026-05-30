@@ -9,6 +9,7 @@ on:
       - 'zadanie_1/czesc_1/**' # if something changes in the application code then workflow will start
       - 'zadanie_2/**'         # directory for this task
       - '.github/workflows/zadanie_2_workflow.yml'
+      - '!**/*.md' # All markdowns files do not trigger workflow
     tags: # Tags
       - 'v*'
 
