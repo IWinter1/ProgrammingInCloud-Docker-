@@ -52,6 +52,7 @@ Sklonowanie repo z GH
 
 Dodanie zmiennych środowiskowych (do połączeń z GH i DH przy użyciu workflowa)
 ![Var](.screenshots/zmienne.jpg)
+
 ![VarWeb](.screenshots/zmienne_web.jpg)
 
 Utworzenie potrzebnych katalogów (później zostały edytowane pliki)
@@ -59,6 +60,7 @@ Utworzenie potrzebnych katalogów (później zostały edytowane pliki)
 
 Dodanie do repo lokalnego wszystkie z katalogu oraz wysłanie wszystkich zmian do GH
 ![Add](.screenshots/dodanie_do_repo.jpg)
+
 ![Commit](.screenshots/commit.jpg)
 
 Wykonanie ręczne workflowa
@@ -70,7 +72,7 @@ Sprawdzenie czy wystąpiły jakieś błedy krytyczne w "TRIVY"
 Sprawdzenie cache
 ![DH](.screenshots/docker_hub.jpg)
 
-Wykonanie jeszcze raz workflowa z tagiem
+Wykonanie jeszcze raz workflowa z tagiem - po czasach budowania widać, że cache działa poprawnie
 ![Tag](.screenshots/gh_action_tag.jpg)
 
 Sprawdzenie czy są dwa workflowy
