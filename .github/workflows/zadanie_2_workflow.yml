@@ -1,0 +1,101 @@
+name: Zadanie 2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths: # Setting appropriate paths, so it does not work on whole repo - only on this directory
+      - 'zadanie_1/czesc_1/**' # if something changes in the application code then workflow will start
+      - 'zadanie_2/**'         # directory for this task
+      - '.github/workflows/zadanie_2_workflow.yml'
+    tags: # Tags
+      - 'v*'
+
+jobs:
+  build-scan-and-push:
+    name: Build, scan and push Docker image to GHCR
+    runs-on: ubuntu-latest # Smallest vm
+    permissions:
+      contents: read
+      packages: write # Permissions to send image to ghcr.io
+      
+    steps:
+      - 
+        name: Check out the source_repo
+        uses: actions/checkout@v6
+      
+      - 
+        name: QEMU set-up
+        uses: docker/setup-qemu-action@v4
+
+      - 
+        name: Buildx set-up
+        uses: docker/setup-buildx-action@v4
+
+      - 
+        name: Login to DockerHub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - 
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      -
+        name: Docker metadata definitions
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/zadanie2
+          flavor: latest=false
+          tags: |
+            type=schedule,pattern={{date 'YYYYMMDD'}},priority=100 
+            type=ref,event=branch,priority=200
+            type=ref,event=pr,priority=300
+            type=raw,value=latest,enable={{is_default_branch}},priority=400
+            type=semver,pattern={{version}},priority=500   
+
+        # Schedule does not work here, because there is no cron (scheduleded push)
+          
+      - 
+        name: Build image for local scanning
+        uses: docker/build-push-action@v7
+        with:
+          context: zadanie_1/czesc_1
+          file: zadanie_1/czesc_1//Dockerfile # Not necessary here, because the Dockerfile file name is not changed (takes default - Dockerfile)
+          load: true
+          tags: local-image:test
+          cache-from: |
+            type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/zadanie2-cache:main
+
+      - 
+        name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'local-image:test'
+          format: 'table'
+          exit-code: '1' # Stops all the jobs if fails test
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH' # Test provides that there are no critical errors
+
+      - 
+        name: Build and push Docker image
+        uses: docker/build-push-action@v7
+        with:
+          context: zadanie_1/czesc_1/
+          file: zadanie_1/czesc_1/Dockerfile
+          platforms: linux/amd64,linux/arm64 
+          push: true # Pushing the image if it passed the trivy test
+          cache-from: |
+            type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/zadanie2-cache:main
+          cache-to: |
+            type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/zadanie2-cache:main,mode=max  
+          tags: ${{ steps.meta.outputs.tags }}
