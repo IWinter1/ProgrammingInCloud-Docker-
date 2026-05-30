@@ -10,7 +10,7 @@ WeatherApp::WeatherApp() {
 
     author = authEnv ? authEnv : "Unknown author";
     port = portEnv ? std::stoi(portEnv) : 8080;
-    apiKey = "a72d7e892817467aae561951260405";
+    apiKey = "API";
 }
 
 void WeatherApp::logStartup() const {
