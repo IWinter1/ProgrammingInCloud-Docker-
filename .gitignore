@@ -1,15 +1,32 @@
-# System files
-*.DS_Store
-*.swp
+# System files (macOS/Windows)
+.DS_Store
 Thumbs.db
+
+# Code editor files (prevents pushing your local settings to GitHub)
+.vscode/
+.idea/
+*.swp
+*~
 
 # Logs
 *.log
+npm-debug.log*
 
-# Docker-related files that should not be in the repo
-*.tar
-docker-compose.override.yaml
+# Environment variables and secrets (VERY IMPORTANT FOR SECURITY!)
+.env
+.env.*
+*.pem
 
-# Temporary or build directories (if you create them)
-tmp/
+# Dependencies and build files (based on your Task 1 application)
+node_modules/
+__pycache__/
+venv/
+env/
 build/
+dist/
+tmp/
+
+# Docker-specific files and archives
+*.tar
+docker-compose.override.yml
+docker-compose.override.yaml
