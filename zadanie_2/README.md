@@ -7,7 +7,7 @@
 
 #### Ponieważ w tym zadaniu zostały wykorzystane kody z "zadania 1", a na tym repo gromadzone są wszystkie pliki (zadania oraz sprawozdania) z przedmiotu PAWChO, to zamiast przenosi pliki do katalogu z zadaniem 2, zostało pobrane całe repozytorium z PAWChO `git clone link`, gdzie znajdują się pliki z "zadania 1", a następnie w pliku konfiguracyjnym (`yaml`) dla workflowa została wykorzystana odpowiednia ścieżka - /zadanie_1/czesc_1/.
 
- Link do tego katalogu [katalog](../zadanie%201/czesc_1)
+ Link do tego katalogu [katalog](../zadanie_1/czesc_1)
 
 # Tagowanie obrazów
 
@@ -25,7 +25,7 @@ type=semver,pattern={{version}} (priorytet: 500) - jeśli zostanie utworzony tag
 #### Cache jest zawsze przesyłany i odbierany z tego samego repozytorium na DockerHubie - nie jest robione to dynamicznie, aby oszczędzić czas - zawsze ma tag `main`
 
 
-# Plik konfiguracyjny [plik](../zadanie%202/)
+# Plik konfiguracyjny [plik](../zadanie_2/)
 
 #### Etapy:
 
